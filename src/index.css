@@ -3,3 +3,7 @@
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
 }
+.leaflet-container {
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
