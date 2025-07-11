@@ -127,7 +127,6 @@
   margin-top: 1.5rem;
 }
 
-/* Responsive adjustments */
 @media (max-width: 640px) {
   .weather-container {
     margin: 1rem;
