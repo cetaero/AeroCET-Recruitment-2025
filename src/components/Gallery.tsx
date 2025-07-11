@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Loading from './Loading'; // Import the spinner component
-import "./Gallery.css"
+
 
 interface ImageData {
   id: string;
