@@ -39,7 +39,8 @@ const Weather: React.FC = () => {
 
   return (
     <div className="weather-container">
-      <button  style={{position:'absolute',top:'2em',right:'2em'}} onClick={()=>navigate('/')}>Home</button>
+      <button className="gallery-home-button" onClick={() => navigate('/')}>🏠 Home</button>
+
       <h2>Weather Forecast</h2>
       <div className="search-container">
         <input

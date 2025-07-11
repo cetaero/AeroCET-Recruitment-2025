@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import Loading from './Loading'; 
-
+import './Gallery.css';
+import Loading from './Loading';
 
 interface ImageData {
   id: string;
@@ -12,6 +12,7 @@ function Gallery() {
   const navigate = useNavigate();
   const [images, setImages] = useState<ImageData[]>([]);
   const [loading, setLoading] = useState(true);
+  const [selectedImage, setSelectedImage] = useState<string | null>(null);
 
   useEffect(() => {
     fetch('https://picsum.photos/v2/list?page=2&limit=10')
@@ -26,29 +27,36 @@ function Gallery() {
       });
   }, []);
 
-  if (loading) {
-    return <Loading />;
-  }
+  if (loading) return <Loading />;
 
   return (
-    <div style={{ padding: '20px' }}>
-      <h2 style={{ color: 'white' }}>Image Gallery</h2>
-      <button
-        style={{ position: 'absolute', right: '2em', top: '2em' }}
-        onClick={() => navigate('/')}
-      >
-        Home
-      </button>
-      <div style={{ display: 'flex', flexWrap: 'wrap', gap: '16px' }}>
+    <div className="gallery-container">
+      <h2 className="gallery-heading">📸 Image Gallery</h2>
+      <button className="gallery-home-button" onClick={() => navigate('/')}>🏠 Home</button>
+
+      <div className="gallery-grid">
         {images.map((img) => (
-          <img
+          <div
             key={img.id}
-            src={`https://picsum.photos/id/${img.id}/300/200`}
-            alt={`By ${img.author}`}
-            style={{ borderRadius: '8px', boxShadow: '0 4px 10px rgba(0,0,0,0.2)' }}
-          />
+            className="gallery-card"
+            onClick={() => setSelectedImage(`https://picsum.photos/id/${img.id}/1000/700`)}
+          >
+            <img
+              src={`https://picsum.photos/id/${img.id}/300/200`}
+              alt={`By ${img.author}`}
+              className="gallery-thumbnail"
+            />
+            <div className="gallery-caption">By {img.author}</div>
+          </div>
         ))}
       </div>
+
+      {selectedImage && (
+        <div className="gallery-modal" onClick={() => setSelectedImage(null)}>
+          <img src={selectedImage} alt="Fullscreen" className="gallery-fullscreen-img" />
+          <button className="gallery-close-button" onClick={() => setSelectedImage(null)}>×</button>
+        </div>
+      )}
     </div>
   );
 }
