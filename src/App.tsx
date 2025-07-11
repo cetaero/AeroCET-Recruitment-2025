@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 import { Routes, Route, useNavigate } from 'react-router-dom';
-import Gallery from './components/Gallery'; // adjust path if needed
+import Gallery from './components/Gallery';
 import Weather from './components/Weather';
 
 const Home: React.FC = () => {

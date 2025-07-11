@@ -1,4 +1,4 @@
-// components/Loading.tsx
+
 import React from 'react';
 
 const spinnerStyle: React.CSSProperties = {
