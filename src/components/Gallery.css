@@ -1,0 +1,117 @@
+
+.gallery-container {
+  position: relative;
+  padding: 2rem 1rem;
+  text-align: center;
+  background-color: var(--background);
+  min-height: 100vh;
+}
+
+.gallery-title {
+  color: white;
+}
+
+.loading {
+  font-size: 1.2rem;
+  color: #aaa;
+}
+
+.error {
+  color: red;
+  font-weight: bold;
+}
+
+.gallery-grid {
+  display: grid;
+  gap: 1.5rem;
+  margin-top: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  padding: 0 1rem;
+}
+
+.gallery-card {
+  background: hsl(28, 62%, 55%);
+  border-radius: 12px;
+  padding: 1rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease;
+}
+
+.gallery-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.gallery-card p {
+  margin-top: 0.5rem;
+  font-weight: 500;
+}
+
+.home-button {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  padding: 10px 16px;
+  font-size: 1rem;
+  border: none;
+  background-color: var(--primary);
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  z-index: 10;
+}
+
+.home-button:hover {
+  background-color: #005dcc;
+}
+
+.gallery-header {
+   position: relative;
+   margin-bottom: 2rem;
+}
+
+.gallery-title {
+  color: white;
+  font-size: 2.2rem;
+  font-weight: bold;
+  margin: 0 auto;
+  text-align: center;
+}
+
+
+.home-button {
+  position: absolute;
+  top: 40px;
+  right: 20px;
+  padding: 8px 14px;
+  font-size: 1rem;
+  background-color:var(--primary);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.home-button:hover {
+  background-color: #ff7700;
+}
+
+.load-more-button {
+  display: block;
+  margin: 2rem auto;
+  padding: 10px 16px;
+  font-size: 1rem;
+  border: none;
+  background-color: var(--primary);
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.load-more-button:hover {
+  background-color: #ff7700;
+}

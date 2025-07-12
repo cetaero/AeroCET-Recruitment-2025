@@ -1,10 +1,10 @@
 import React from 'react';
 import './App.css';
+import { useNavigate } from 'react-router-dom'
 
 const App: React.FC = () => {
-  const handleTask = (task: string) => {
-    alert(`You selected ${task}`);
-  };
+  const navigate = useNavigate();
+
 
   return (
     <div className="app">
@@ -12,8 +12,8 @@ const App: React.FC = () => {
         <h1>Welcome to <span className="highlight">AeroCET</span> Recruitment 2025</h1>
         <p>Official Aeromodelling Club of College of Engineering, Trivandrum</p>
         <div className="button-group">
-          <button onClick={() => handleTask('Task 1')}>Task 1 [Gallery]</button>
-          <button onClick={() => handleTask('Task 2')}>Task 2 [Weather]</button>
+          <button onClick={() => navigate('/gallery')}> 📸 Gallery</button>
+          <button onClick={() => navigate('/weather')}> 🌤️ Weather</button>
         </div>
       </div>
     </div>
