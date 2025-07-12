@@ -10,7 +10,7 @@ const Home: React.FC = () => {
         <p>Official Aeromodelling Club of College of Engineering, Trivandrum</p>
         <div className="button-group">
           <button onClick={()=>{navigate('/gallery')}}>Gallery</button>
-          <button>Task 2 [Weather]</button>
+          <button onClick={()=>{navigate('/weather')}}>Weather</button>
         </div>
       </div>
     </div>
