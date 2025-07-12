@@ -16,6 +16,7 @@ const Weather: React.FC =()=>{
             console.log(data)
         }
         catch(error){
+            
         console.log(error)
     }
     }
