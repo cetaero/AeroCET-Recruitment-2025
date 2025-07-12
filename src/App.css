@@ -3,7 +3,7 @@
   --primary: #ff9100;   /* Violet */
   --background: #1c002a;
   --text: #f3f3f3;
-  --text-secondary: #c2c2c2;
+  --text-secondary: white;
 }
 
 body, html, #root {
