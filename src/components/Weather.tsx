@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import  { useState } from 'react';
 import './Weather.css';
 import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
@@ -9,7 +9,7 @@ const Weather: React.FC = () => {
   const [city, setCity] = useState('');
   const [weather, setWeather] = useState<any>(null);
   const [error, setError] = useState('');
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(false);  
 
   const fetchWeather = async () => {
     if (!city) return;
