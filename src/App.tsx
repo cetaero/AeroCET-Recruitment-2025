@@ -11,9 +11,9 @@ const Home: React.FC = () => {
     <div className="app">
       <div className="content">
         <h1>
-          Welcome to <span className="highlight">AeroCET</span> Recruitment 2025
+          Welcome to <span className="highlight">Gallery &</span> Weather 
         </h1>
-        <p>Official Aeromodelling Club of College of Engineering, Trivandrum</p>
+        
         <div className="button-group">
           <button onClick={() => navigate('/gallery')}>Gallery</button>
           <button onClick={() => navigate('/weather')}>Weather</button>
